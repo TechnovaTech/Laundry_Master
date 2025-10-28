@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+</head>
+<body>
+    <h1>API Test</h1>
+    <button onclick="testStates()">Test States API</button>
+    <button onclick="testCities()">Test Cities API (WB)</button>
+    <button onclick="testPincodes()">Test Pincodes API (Kolkata)</button>
+    
+    <div id="results"></div>
+
+    <script>
+        async function testStates() {
+            try {
+                const response = await fetch('/api/locations/states');
+                const data = await response.json();
+                document.getElementById('results').innerHTML = '<h3>States:</h3><pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            } catch (error) {
+                document.getElementById('results').innerHTML = '<h3>Error:</h3>' + error.message;
+            }
+        }
+
+        async function testCities() {
+            try {
+                const response = await fetch('/api/locations/cities?state=WB');
+                const data = await response.json();
+                document.getElementById('results').innerHTML = '<h3>Cities for WB:</h3><pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            } catch (error) {
+                document.getElementById('results').innerHTML = '<h3>Error:</h3>' + error.message;
+            }
+        }
+
+        async function testPincodes() {
+            try {
+                const response = await fetch('/api/locations/pincodes?city=Kolkata');
+                const data = await response.json();
+                document.getElementById('results').innerHTML = '<h3>Pincodes for Kolkata:</h3><pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            } catch (error) {
+                document.getElementById('results').innerHTML = '<h3>Error:</h3>' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

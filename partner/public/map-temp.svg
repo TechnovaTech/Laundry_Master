@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="260" viewBox="0 0 800 260">
+  <rect width="800" height="260" fill="#EEF2F7"/>
+  <!-- Roads -->
+  <path d="M0 40 L800 40" stroke="#D7DEE7" stroke-width="8"/>
+  <path d="M0 120 L800 120" stroke="#D7DEE7" stroke-width="8"/>
+  <path d="M0 200 L800 200" stroke="#D7DEE7" stroke-width="8"/>
+  <path d="M60 0 L740 260" stroke="#D7DEE7" stroke-width="8"/>
+  <path d="M740 0 L60 260" stroke="#D7DEE7" stroke-width="8"/>
+
+  <!-- Blocks/Parks/Water -->
+  <rect x="40" y="60" width="160" height="50" rx="8" fill="#CDE7CA"/>
+  <rect x="240" y="150" width="140" height="50" rx="8" fill="#CDE7CA"/>
+  <rect x="520" y="60" width="160" height="50" rx="8" fill="#BFD8FF"/>
+  <rect x="420" y="10" width="100" height="40" rx="8" fill="#FFE6B8"/>
+
+  <!-- Pins -->
+  <circle cx="120" cy="200" r="10" fill="#0D6EFD"/>
+  <circle cx="560" cy="80" r="10" fill="#FF7A00"/>
+  <circle cx="720" cy="180" r="10" fill="#0D6EFD"/>
+</svg>
